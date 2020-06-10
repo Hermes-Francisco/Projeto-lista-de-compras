@@ -1,0 +1,12 @@
+CREATE TABLE `usuario` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`nome` VARCHAR(100) NOT NULL COLLATE 'latin1_swedish_ci',
+	`email` VARCHAR(100) NOT NULL COLLATE 'latin1_swedish_ci',
+	`password_hash` VARCHAR(100) NOT NULL COLLATE 'latin1_swedish_ci',
+	`updatedAt` DATETIME NOT NULL,
+	`createdAt` DATETIME NOT NULL,
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
