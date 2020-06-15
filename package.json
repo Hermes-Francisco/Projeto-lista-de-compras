@@ -4,14 +4,17 @@
   "main": "index.js",
   "repository": "https://github.com/Hermes-Francisco/Projeto-lista-de-compras.git",
   "author": "<franciscohermes2000@hotmail.com>",
-  "scripts":{
-    "dev" : "nodemon src/server"
+  "scripts": {
+    "dev": "nodemon src/server"
   },
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mariadb": "^2.4.0",
+    "sequelize": "^5.21.13"
   },
   "devDependencies": {
+    "sequelize-cli": "^5.5.1",
     "sucrase": "^3.15.0"
   }
 }
