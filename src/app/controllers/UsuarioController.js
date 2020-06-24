@@ -13,10 +13,10 @@ class UsuarioController{
     }
 
     async store(req, res){
-        const { nome, email, password_hash } = req.body;
+        const { nome, email, password } = req.body;
         let usuario = Usuario.findOne({where : {email}});
         if(!usuario){
-            Usuario.create({ nome, email, password_hash });
+            Usuario.create({ nome, email, password });
         }
         return res.json(usuario);
     }
