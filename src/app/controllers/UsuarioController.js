@@ -14,10 +14,10 @@ class UsuarioController{
 
     async store(req, res){
         const { nome, email, password } = req.body;
-        let usuario = Usuario.findOne({where : {email}});
+        let usuario = await Usuario.findOne({where : {email}});
         if(!usuario){
-            Usuario.create({ nome, email, password });
-        }
+           usuario = await Usuario.create({ nome, email, password });
+        }else return res.status(401).json({mensagem: "email cadastrado"})
         return res.json(usuario);
     }
 
